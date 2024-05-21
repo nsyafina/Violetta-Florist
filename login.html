@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Violetta Florist</title>
+	<link rel="stylesheet" href="gaya.css">
+	<script>
+		function loginUser() {
+			// Mengambil nilai dari input username dan password
+			var username = document.getElementsByName("email")[0].value;
+			var password = document.getElementsByName("password")[0].value;
+
+			// Check if email and password are not empty
+			if (username === "" || password === "") {
+				alert("Silahkan masukkan email dan kata sandi.");
+				return false;
+			}
+
+			// Validasi sederhana (contoh: username harus "bintang@gmail.com" dan password harus "123")
+			if (username === "bintang@gmail.com" && password === "123") {
+				alert('Login Berhasil. Selamat berbelanja!');
+				// Jika login berhasil, arahkan ke halaman home.html
+				window.location.href = "home.html";
+			} else {
+				alert('Login Gagal. Coba lagi.');
+			}
+		}
+	</script>
+</head>
+<body>
+	<form action="" class="form">
+		<h1>LOGIN</h1>
+		<input type="email" name="email" class="box" placeholder="Enter Username">
+		<input type="password" name="password" class="box" placeholder="Enter Password">
+		<button type="button" onclick="loginUser()" id="submit">Login</button>
+	</form>
+</body>
+</html>
